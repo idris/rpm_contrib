@@ -18,9 +18,8 @@ if defined?(::Mongoid) && !NewRelic::Control.instance['disable_mongodb']
   module RPMContrib::Instrumentation
 
     module Mongoid
-      def included(model)
-        model.metaclass.class_eval do
-          puts "adding mongoid method tracers for #{model.name}"
+      def self.included(model)
+        class << self
           add_method_tracer :create, 'Database/#{self.name}/create'
           add_method_tracer :create!, 'Database/#{self.name}/create!'
           add_method_tracer :delete_all, 'Database/#{self.name}/delete_all'
