@@ -37,7 +37,6 @@ the New Relic Ruby monitoring gem newrelic_rpm.
      "lib/rpm_contrib/instrumentation/resque.rb",
      "test/helper.rb",
      "test/schema.rb",
-     "test/test_mongoid.rb",
      "test/test_redis.rb"
   ]
   s.homepage = %q{http://github.com/newrelic/rpm_contrib}
