@@ -47,7 +47,6 @@ the New Relic Ruby monitoring gem newrelic_rpm.
   s.test_files = [
     "test/helper.rb",
      "test/schema.rb",
-     "test/test_mongoid.rb",
      "test/test_redis.rb"
   ]
 
